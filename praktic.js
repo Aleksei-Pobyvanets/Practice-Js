@@ -14,3 +14,15 @@ function findShort(s){
     var shortest = shortest.length;
     return shortest
   }
+// НЕ РЕШЕНО
+  function twoOldestAges(ages){
+    var bumb1 = []
+    var bumb2 = []
+      if(Math.max(ages)){
+        return bumb1
+      };
+      if(Math.max(ages)){
+        return bumb2
+      };
+      return bumb2 + bumb1
+    }
