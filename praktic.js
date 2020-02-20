@@ -14,15 +14,21 @@ function findShort(s){
     var shortest = shortest.length;
     return shortest
   }
-// НЕ РЕШЕНО
-  function twoOldestAges(ages){
-    var bumb1 = []
-    var bumb2 = []
-      if(Math.max(ages)){
-        return bumb1
-      };
-      if(Math.max(ages)){
-        return bumb2
-      };
-      return bumb2 + bumb1
-    }
+
+
+// 2 наибольших числа
+var ages = [2,6,3, 3,2]
+function twoOldestAges(ages){
+var r = ages.sort().reverse()
+console.log([r[1], r[0]])
+return [r[1], r[0]] 
+}
+// или
+function twoOldestAges(ages){
+  var rankingAges = ages.sort(function(a, b) {
+        return b - a;
+    });
+    var newArray = [ages[1], ages[0]];
+    return newArray;
+  }
+  
