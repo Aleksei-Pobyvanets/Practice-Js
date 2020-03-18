@@ -31,4 +31,16 @@ function twoOldestAges(ages){
     var newArray = [ages[1], ages[0]];
     return newArray;
   }
-  
+
+  //
+    function pattern(n){
+      var output="";
+    for (var column = 0; column < n; column++) {
+        for (var row = 0; row < column+1; row++) {
+            output += (column+1);
+        } 
+        output += '\n';
+      }
+      return output.substring(0, output.length - 1);
+    }
+  // Делает это (1\n22\n333\n4444\n55555)
