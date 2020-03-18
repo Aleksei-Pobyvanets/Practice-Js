@@ -44,3 +44,16 @@ function twoOldestAges(ages){
       return output.substring(0, output.length - 1);
     }
   // Делает это (1\n22\n333\n4444\n55555)
+  function maxTriSum(numbers){
+    var rankingAges = numbers.sort(function(a, b,) {
+          return b - a;
+      });
+      var newArray = [numbers[2],numbers[1], numbers[0]];
+      
+      var sum=0;
+      for(var i=0;i<newArray.length;i++){
+      sum = sum + parseInt(newArray[i]);
+      }
+      return sum
+  }
+  https://www.codewars.com/kata/5aa1bcda373c2eb596000112/train/javascript  
