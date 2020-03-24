@@ -54,3 +54,6 @@ function twoOldestAges(ages){
     
     return e
   }
+  for(var i = 1; num >= i; i++){
+  sum += i
+  }
