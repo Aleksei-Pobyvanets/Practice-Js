@@ -57,3 +57,21 @@ function twoOldestAges(ages){
   for(var i = 1; num >= i; i++){
   sum += i
   }
+// из (3) Делает [1.2.3] и удаляет чётные значения 
+function extraPerfect(n){
+let arr=[1];
+  for (let i=3;i<=n;i+=2)
+  arr.push(i)
+  return arr
+}
+// считает длинну цифры например 333 = 3
+function digits(n) {
+  for(var i = 0; n > 1; i++) {
+      n /= 10;
+  }
+  if(i > 1){
+    return i;
+  }else {
+  return 1
+  } 
+}
