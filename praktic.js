@@ -75,3 +75,45 @@ function digits(n) {
   return 1
   } 
   }
+
+  // Balanced || not Balanced numbers
+  function balancedNum(number) {	
+    let numArray = number.toString().split('');
+    if (numArray.length < 3) { 
+      return 'Balanced';
+    }
+    if (numArray.length % 2 !== 0) { 
+      let sumRight = 0; 
+      let sumLeft = 0;
+      for (let i = 0; i < numArray.length; i++) {
+        if (i < parseInt(numArray.length / 2)) {  
+          sumLeft += Number(numArray[i]);
+          console.log(i)
+        } else if (i > parseInt(numArray.length / 2)) {
+          sumRight += Number(numArray[i]);			
+        }  
+      }
+      if (sumLeft === sumRight) {
+        return 'Balanced';
+      } else {
+        return 'Not Balanced';
+      }
+    } else { 
+      let sumRight = 0;
+      let sumLeft = 0;
+      let middleIndex = parseInt((numArray.length-1) / 2); 
+      let middleIndex2 = numArray.length / 2; 
+      for (let i = 0; i < numArray.length; i++) {
+        if (i < middleIndex && i < middleIndex2) { 
+          sumLeft += Number(numArray[i]);
+        } else if (i > middleIndex && i > middleIndex2) {
+          sumRight += Number(numArray[i]);
+        }
+      }
+      if (sumLeft === sumRight) {
+            return 'Balanced'
+      } else {
+         return 'Not Balanced'
+      }
+    }
+  }
