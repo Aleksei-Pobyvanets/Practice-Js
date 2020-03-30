@@ -117,3 +117,16 @@ function digits(n) {
       }
     }
   }
+
+  //
+  function tidyNumber(n){
+    var arr = n.toString().split('');
+    console.log(arr)
+    var arr1 = arr.sort();
+    console.log(arr1)
+      if(arr != arr1){
+        return false
+      }else{
+        return true
+      }
+    }
