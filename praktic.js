@@ -118,15 +118,11 @@ function digits(n) {
     }
   }
 
-  //
-  function tidyNumber(n){
-    var arr = n.toString().split('');
-    console.log(arr)
-    var arr1 = arr.sort();
-    console.log(arr1)
-      if(arr != arr1){
-        return false
-      }else{
-        return true
-      }
-    }
+  // Сравнение чисел 122 i 122 - True else false
+ function tidyNumber(n){
+  let s = n.toString();
+  for (let i = 0; i < s.length-1; i++) {
+    if (s[i] > s[i+1]) return false;
+  }
+  return true;
+}
